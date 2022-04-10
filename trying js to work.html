@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <head>
+    <title>Monthly Weather Forecast coded by Aniqa</title>
+    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://www.api.msn.com"> 
+    
+  </head>
+
+  <body>
+    <h1> Monthly Weather Forecast</h1>
+
+    <p>Monthly Forecast for 2022</p>
+    <h2>Search for your city's weather</h2>
+    <form class ="entercity">
+      <input class="form-control"
+        id="entercity"
+        type="search"
+        placeholder="Type your city here"
+        autofocus="on"
+        autocomplete="off"
+        value=""> <button class="btn btn-primary" value="Search" type="submit">Search City</button> </form>
+      <script>
+        function searchCity(city) {
+          var apiKey = "236b2fbdb23cadac7e1ab7a70389d771";
+          let apiUrl ="https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=236b2fbdb23cadac7e1ab7a70389d771";
+
+          axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition);
+        }
+
+        function handleSubmit(event) {
+          event.preventDefault();
+          let button = document.querySelector("#entercity").value;
+          searchCity(city.value);
+        }
+        function searchLocation(position) {
+          const apiKey = "236b2fbdb23cadac7e1ab7a70389d771";
+          let apiUrl="https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=236b2fbdb23cadac7e1ab7a70389d771";
+
+          axios.get(apiUrl).then(displayWeatherCondition);
+        }
+      </script>
+
+    <i class="bi bi-cloud-lightning-rain"></i>
+    <div class="row">
+      <div class="row">
+        <span class="border border-primary"></span>
+        <img
+          src="https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/technology/apps/shutterstock_240459751.jpg" /> <style> img{width: 600px; margin: 0 auto; type: repeat}; </style>
+          
+    <h3>Weather Details</h3>
+            <script>
+            console.log(response.data);
+            <div class="container">
+    <div class="row current">
+    </div>
+  <div class="col-3 curtemp">
+      <span id="maintemp">
+                -1
+              </span>
+              <span class="units">
+                °C
+              </span>
+  </div>
+  <div class="col-6 curweather">
+    <span id="description">  
+    <strong>Rain and Snow</strong>
+    </span>
+      <br>
+      Humidity
+    <span id="humidity">
+       10
+      </span>
+      %
+    <br>
+    Wind
+    <span id="wind">
+     20 
+    </span>
+    km/h
+  </div>
+</div>
+<hr>
+<h2>
+    This week
+</h2>
+    <div class="row future">
+  <div class="col">
+      <strong>Monday</strong>
+      <br>
+      -1°C
+      <br>
+      ☀️
+    </div>
+  <div class="col">
+      <strong>Tuesday</strong>
+      <br>
+      -3°C
+      <br>
+      ☁️
+  </div>
+  <div class="col">
+      <strong>Wednesday</strong>
+      <br>
+      0°C
+      <br>
+      🌧
+  </div>
+  <div class="col">
+      <strong>Thursday</strong>
+      <br>
+      -5°C
+      <br>
+      ☀️
+  </div>
+  <div class="col">
+      <strong>Friday</strong>
+      <br>
+      2°C
+      <br>
+      🌤
+  </div>
+  </div>
+  <hr>
+    <i class="bi bi-cloud-lightning-rain"></i>
+    <hr>
+  <div class="search">
+  <form class="entercity">
+    <input  type="search" autofocus="on" autocomplete="off" id="entercity">
+    <button id="search" class="btn btn-primary" value ="Search" type="submit"
+    value="#city.value">Search city</button>
+  </form>
+</script>
+</div></div></div></div> </div> </div></div></div></div> </div> </div></div>
+
+    <p>Coded by Aniqa Afzal</p>
+    <i class="bi bi-cloud-lightning-rain"></i>
+
+<style>
+title {background-color:none;}
+
+h1 {
+  margin: 0px auto;
+  padding: 20px;
+  text-align: center;
+  color: white
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.26);
+  font-family: "Calibri", "Calibri",  "Calibri"",
+    "Aril", "Arial", "Verdana", "Calibri";
+}
+
+h2,
+h3 {
+  margin: 0px auto;
+  padding: 5px;
+  color: white;
+  text-align:center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.26);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+button {
+  margin: 20px auto;
+  border: 1px solid #1a71f5;
+  background: #1a71f5;
+  color: #fff;
+  font-size: 16px;
+  padding: 16px 24px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid blueviolet;
+  transition: 200ms ease-in-out;
+  border: 1px solid #440bd4;
+  border-radius: 60px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+button:hover {
+  color: yellow;
+  background: white rgb(242, 247, 248);
+  cursor: pointer;
+  border: 1px solid;
+}
+#entercity{
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: blueviolet;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+body {
+  background-image: url("https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/technology/apps/shutterstock_240459751.jpg");
+  background-repeat: repeat;
+  width: large;
+}
+
+.container {
+  width: 700px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 15px 20px;
+  border-radius: 48%;
+}
+
+p {
+  color: whitesmoke;
+  text-align: center;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0 auto;
+  line-height: 48px;
+  margin: 0;
+}
+
+svg {
+  width: 500px;
+}
+
+.weathericon {
+  font-size: 80px;
+  text-align: right;
+}
+.curtemp {
+  font-size: 40px;
+  text-align: left;
+}
+.units {
+  font-size: large;
+  position: relative;
+}
+.curweather {
+  font-size: 20px;
+  text-align: center;
+}
+
+body {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+}
+
+.current {
+  margin: 0px auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: blue;
+}
+
+.curtemp {
+  font-size: 50px;
+  text-align: left;
+}
+.units {
+  font-size: x-large;
+  position: relative;
+  top: -19px;
+}
+.curweather {
+  font-size: 24px;
+  text-align: center;
+}
+#description {
+  text-transform: capitalize;
+}
+
+.search {
+  color: rgb(0, 47, 255);
+  display: block;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 20%;
+}
+#entercity {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size:medium;
+  font-weight: 300;
+  line-height: 1.5;
+  color: skyblue
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+border-border-primary {
+  color:black
+  border-color: white;
+}
+</style>
+
+<script>
+<form class="entercity">
+      <input class="form-control"
+        id="entercity"
+        type="search"
+        placeholder="Type your city here"
+        autofocus="on"
+        autocomplete="off"
+        value="#city.value"> <button>Search city</button> </form>
+
+function formatDate(date) {
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let dayIndex = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = "days[dayIndex]";
+  return `${day} ${hours}:${minutes}`;
+}
+function displayWeatherCondition(response) {
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+}
+function searchCity(...args: [city: any]) {
+  let apiKey = "236b2fbdb23cadac7e1ab7a70389d771";
+  let apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=236b2fbdb23cadac7e1ab7a70389d771";
+  axios.get(apiUrl).then(showTemperature);
+}
+let form = document.querySelector("form");
+form.addEventListener("submit", search);
+
+function showTemperature(response) {
+  let temperature = Math.round(response.data.main.temp);
+  console.log(temperature);
+  console.log(response);
+  let name = response.data.name;
+  let descript = response.data.weather[0].description;
+  let humidity = response.data.main.humidity;
+  let windspeed = response.data.wind.speed;
+  let messagename = `${name}`;
+  let messagetemp = `${temperature}`;
+  let messagehum = `${humidity}`;
+  let messagewind = `${windspeed}`;
+  let messagedescript = `${descript}`;
+  let city = document.querySelector("#city");
+  let maintemp = document.querySelector("#maintemp");
+  let humid = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  let weatherdescript = document.querySelector("#description");
+  city.innerHTML = messagename;
+  maintemp.innerHTML = messagetemp;
+  humid.innerHTML = messagehum;
+  wind.innerHTML = messagewind;
+  weatherdescript.innerHTML = messagedescript;
+
+
+let apiKey = "236b2fbdb23cadac7e1ab7a70389d771";
+let units = "metric";
+let apiUrl="https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=236b2fbdb23cadac7e1ab7a70389d771";
+
+axios.get(apiUrl).then(showTemperature); }
+</script>
+
+<script>
+function giveDate() {
+  let now = new Date();
+  let h3 = document.querySelector("h3");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+
+  let day = days[now.getDay()];
+  let month = months[now.getMonth()];
+  let date = now.getDay();
+  let year = now.getFullYear();
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  h3.innerHTML = `${day} ${month} ${date}, ${year} - ${hours}:${minutes}`;
+}
+giveDate(get.Date);
+</script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
